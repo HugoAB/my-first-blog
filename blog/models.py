@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils import timezone
+from django.shortcuts import render
+#from .models import Post
 
 
 class Post(models.Model):
@@ -7,7 +9,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
     created_date = models.DateTimeField(
-            default=timezone.now)
+        default=timezone.now)
     published_date = models.DateTimeField(
             blank=True, null=True)
 
